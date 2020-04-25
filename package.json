@@ -1,0 +1,28 @@
+{
+  "name": "API-restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "dev": "nodemon dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brunomestres/API-Restaurant-NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brunomestres/API-Restaurant-NodeJS/issues"
+  },
+  "homepage": "https://github.com/Brunomestres/API-Restaurant-NodeJS#readme",
+  "dependencies": {
+    "restify": "^8.5.1"
+  },
+  "devDependencies": {
+    "@types/restify": "^8.4.2",
+    "nodemon": "^2.0.3"
+  }
+}
