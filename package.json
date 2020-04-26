@@ -19,9 +19,11 @@
   },
   "homepage": "https://github.com/Brunomestres/API-Restaurant-NodeJS#readme",
   "dependencies": {
+    "mongoose": "^5.9.10",
     "restify": "^8.5.1"
   },
   "devDependencies": {
+    "@types/mongoose": "^5.7.13",
     "@types/restify": "^8.4.2",
     "nodemon": "^2.0.3"
   }
