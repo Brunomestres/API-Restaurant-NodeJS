@@ -2,6 +2,7 @@ import * as restify from 'restify';
 import * as mongoose from 'mongoose';
 import { environment } from '../common/environment';
 import { Router } from  '../common/router';
+import { mergePatch } from './merge-patch';
 export class Server{
     application : restify.Server;
     initRoutes(routers: Router[]): Promise<any>
@@ -14,7 +15,7 @@ export class Server{
                 });
                 this.application.use(restify.plugins.queryParser());
                 this.application.use(restify.plugins.bodyParser());
-                
+                this.application.use(mergePatch);
                 //Rotas
                 
                 for(let router of routers)
@@ -36,7 +37,9 @@ export class Server{
     {
         return mongoose.connect(environment.db.url, {
             useNewUrlParser: true,
-            useUnifiedTopology: true
+            useUnifiedTopology: true,
+            useCreateIndex:true,
+            useFindAndModify: false
         });
     }
 
